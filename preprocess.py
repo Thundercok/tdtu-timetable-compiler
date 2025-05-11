@@ -1,7 +1,6 @@
 import pytesseract
 import cv2
 from PIL import Image
-
 #%%
 def check_tesseract():
     try:
@@ -9,6 +8,7 @@ def check_tesseract():
         print(f"Tesseract version: {version}")
     except pytesseract.TesseractNotFoundError:
         print("Lỗi: Tesseract Engine chưa được cài đặt!")
+
 #%%
 def prepare_image(image_path):
     # 1. Đọc ảnh - OpenCV trả về numpy array mặc định
